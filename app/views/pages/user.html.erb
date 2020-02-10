@@ -1,0 +1,14 @@
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; line-height: 1em; font-size: 5em; margin-bottom:20px">
+  <h1 style="font-size: 1em">Profil de <%= User.find(params[:id].to_i).first_name %> <%= User.find(params[:id].to_i).last_name %></h1>
+</div>
+
+<main class="container">
+<div class="card" >
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Description : <%= User.find(params[:id].to_i).description %></li>
+    <li class="list-group-item">Email : <%= User.find(params[:id].to_i).email %></li>
+    <li class="list-group-item">Age : <%= User.find(params[:id].to_i).age %></li>
+    <li class="list-group-item">Ville : <%= User.find(params[:id].to_i).city.name %></li>
+  </ul>
+</div>
+</main>
