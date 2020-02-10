@@ -1,7 +1,6 @@
 
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: center; line-height: 1em; font-size: 5em; margin-bottom:20px">
-  <h1 style="font-size: 1em">Vous êtes sur le potin <br>de <%= Gossip.find(params[:id].to_i).user.first_name %> <%= Gossip.find(params[:id].to_i).user.last_name %></h1>
-</div>
+  <h1>Vous êtes sur le potin <br>de <%= Gossip.find(params[:id].to_i).user.first_name %> <%= Gossip.find(params[:id].to_i).user.last_name %></h1>
+
 
 <main class="container">
 <div style="margin-bottom: 20px;"><%= link_to "Voir le profil de l'auteur", user_path(Gossip.find(params[:id].to_i).user.id), :class => "btn btn-info" %></div>
